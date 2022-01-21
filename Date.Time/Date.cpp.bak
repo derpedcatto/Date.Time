@@ -16,7 +16,7 @@ void Date::AddDays()
 
 }
 
-/*Операторы перегрузки*/
+/*РћРїРµСЂР°С‚РѕСЂС‹ РїРµСЂРµРіСЂСѓР·РєРё*/
 bool Date::operator>(const Date& other)
 {
 	if (y > other.y)
@@ -67,7 +67,7 @@ istream& operator>>(istream& input, Date& src)
 }
 
 /*Set-Get*/
-/*Сделать проверку для Day*/
+/*РЎРґРµР»Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ РґР»СЏ Day*/
 void Date::SetYear(int y)
 {
 	if (y < 0)
