@@ -13,7 +13,7 @@ char* Date::DayOfWeek() const
 
 void Date::AddDays()
 {
-s
+
 }
 
 /*Îïåðàòîðû ïåðåãðóçêè*/
