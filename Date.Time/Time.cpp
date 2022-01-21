@@ -90,7 +90,7 @@ int Time::RemoveSeconds(int input)
 	}
 }
 
-/*Îïåðàòîðû ïåðåãðóçêè*/
+/*ÐžÐ¿ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ñ‹ Ð¿ÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ¸*/
 Time& Time::operator+(const int& input)
 {
 	this->AddSeconds(input);
