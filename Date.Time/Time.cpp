@@ -6,28 +6,27 @@ int Time::PrintTime() const
 	return printf("%02d:%02d:%02d\n", h, m, s);
 }
 
-char* Time::TimeOfDay() const
+string Time::TimeOfDay() const
 {
-	char* ch = new char[8];
-
+	string ch;
 	if (h >= 0 && h <= 6)
 	{
-		strcpy_s(ch, 8, "Night");
+		ch = "Night";
 		return ch;
 	}
 	else if (h >= 7 && h <= 12)
 	{
-		strcpy_s(ch, 8, "Morning");
+		ch = "Morning";
 		return ch;
 	}
 	else if (h >= 13 && h <= 18)
 	{
-		strcpy_s(ch, 8, "Day");
+		ch = "Day";
 		return ch;
 	}
 	else if (h >= 18 && h < 24)
 	{
-		strcpy_s(ch, 8, "Evening");
+		ch = "Evening";
 		return ch;
 	}
 }
@@ -90,7 +89,7 @@ int Time::RemoveSeconds(int input)
 	}
 }
 
-/*Îïåðàòîðû ïåðåãðóçêè*/
+/*ÐžÐ¿ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ñ‹ Ð¿ÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ¸*/
 Time& Time::operator+(const int& input)
 {
 	this->AddSeconds(input);
@@ -101,7 +100,6 @@ Time& Time::operator-(const int& input)
 	this->RemoveSeconds(input);
 	return *this;
 }
-
 //postfix
 Time& Time::operator++(int)
 {
@@ -148,7 +146,8 @@ Time& Time::operator() (int h, int m, int s)
 }
 ostream& operator<<(ostream& output, const Time& src)
 {
-	return output << src.PrintTime();
+	src.PrintTime();
+	return output;
 }
 istream& operator>>(istream& input, Time& src)
 {

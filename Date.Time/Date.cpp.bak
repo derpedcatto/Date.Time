@@ -7,6 +7,7 @@ int Date::PrintDate() const
 
 char* Date::DayOfWeek() const
 {
+	char* ch = new char[20];
 	return 0;
 }
 
@@ -15,7 +16,7 @@ void Date::AddDays()
 
 }
 
-/*РћРїРµСЂР°С‚РѕСЂС‹ РїРµСЂРµРіСЂСѓР·РєРё*/
+/*Операторы перегрузки*/
 bool Date::operator>(const Date& other)
 {
 	if (y > other.y)
@@ -51,8 +52,7 @@ Date& Date::operator() (int y, int m, int d)
 }
 ostream& operator<<(ostream& output, const Date& src)
 {
-	src.PrintDate();
-	return output; 
+	return output << src.PrintDate();
 }
 istream& operator>>(istream& input, Date& src)
 {
@@ -67,7 +67,7 @@ istream& operator>>(istream& input, Date& src)
 }
 
 /*Set-Get*/
-/*РЎРґРµР»Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ РґР»СЏ Day*/
+/*Сделать проверку для Day*/
 void Date::SetYear(int y)
 {
 	if (y < 0)

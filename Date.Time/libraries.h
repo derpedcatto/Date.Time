@@ -3,3 +3,4 @@
 #include <windows.h>
 #include "Date.h"
 #include "Time.h"
+#include <string>
