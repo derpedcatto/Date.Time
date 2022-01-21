@@ -13,10 +13,10 @@ char* Date::DayOfWeek() const
 
 void Date::AddDays()
 {
-
+s
 }
 
-/*Операторы перегрузки*/
+/*ГЋГЇГҐГ°Г ГІГ®Г°Г» ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГЁ*/
 bool Date::operator>(const Date& other)
 {
 	if (y > other.y)
@@ -67,7 +67,7 @@ istream& operator>>(istream& input, Date& src)
 }
 
 /*Set-Get*/
-/*Сделать проверку для Day*/
+/*Г‘Г¤ГҐГ«Г ГІГј ГЇГ°Г®ГўГҐГ°ГЄГі Г¤Г«Гї Day*/
 void Date::SetYear(int y)
 {
 	if (y < 0)
