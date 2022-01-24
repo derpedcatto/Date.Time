@@ -1,6 +1,4 @@
 #pragma once
-#include <iostream>
-#include <chrono>
 using namespace std;
 
 class Date
@@ -30,10 +28,14 @@ public:
 
 	/*Методы*/
 	int PrintDate() const;
-	char* DayOfWeek() const;
-	void AddDays();
+	string DayOfWeek() const;
+	void AddDays(int input);
+	int DateDifference(Date other);
 
 	/*Операторы перегрузки*/
+	Date& operator+(const int& input);
+	Date& operator++(int);
+	int operator-(const Date& other);
 	bool operator>(const Date& other);
 	bool operator<(Date& other);
 	bool operator==(const Date& other);
@@ -55,16 +57,16 @@ public:
 /*
 Разработать класс Date, включающий следующее :
 + Поля day, month, year;
-- Константный метод char* DayOfWeek() const;
++ Константный метод char* DayOfWeek() const;
 + Конструктор по умолчанию Date() (текущая дата);
 + Конструктор с параметрами Date(int day, int month, int year);
 + Необходимые сеттеры и геттеры для полей;
-- Метод, возвращающий разницу между двумя датами в днях («-»);
-- Метод изменения даты на заданное количество дней («+»);
++ Метод, возвращающий разницу между двумя датами в днях («-»);
++ Метод изменения даты на заданное количество дней («+»);
 + Метод вывода даты на экран void PrintDate();
-- «+»
-- «-»
-- «++» 
++ «+»
++ «-»
++ «++» 
 - «--» 
 + «>»
 + «<»
